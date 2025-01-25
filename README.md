@@ -22,23 +22,38 @@ The objective of this project was to analyze the Heart Attack Risk Prediction da
   - Value 2: Showing probable or definite left ventricular hypertrophy by Estes' criteria.
 - **thalach**: Maximum heart rate achieved.
 - **target**: 0 = Less chance of heart attack, 1 = More chance of heart attack.
+---
 
-## Key Insights and Results Summary
-1. **Descriptive Analysis**:
-   - The average age of patients is 54.37 years.
-   - Cholesterol levels have a mean of 250.13 mg/dL, with significant variation across patients.
-   - Most patients do not experience exercise-induced angina, as indicated by the mean value of 0.684 for `exang`.
+## **Key Insights and Results Summary**
 
-2. **Inferential Analysis**:
-   - Statistically significant differences were observed in cholesterol levels across chest pain types (ANOVA results).
-   - Attributes like age, blood pressure, and cholesterol show weak correlation with the target variable.
+### **Descriptive Analysis**
+1. The **average age** of patients is **54.37 years**, with the majority (42.57%) falling in the age range of 50–60 years. *(Python result – more precise age distribution provided)*  
+2. The **average cholesterol level** is **246.26 mg/dL**, significantly higher than the known population mean of 200 mg/dL. *(Excel result – from one-sample t-test for clarity and relevance)*  
+3. There is **no significant difference** in the average maximum heart rate achieved between males (148.96 bpm) and females (151.13 bpm). *(Excel result – derived from independent t-test for gender comparison)*  
 
-3. **Regression Analysis**:
-   - The regression model had an R-squared value of 0.0457, indicating a weak relationship between predictors and heart attack risk.
+---
 
-4. **Chi-Square Test**:
-   - Significant differences were observed between observed and expected frequencies for chest pain type and exercise-induced angina, suggesting these factors are crucial in determining heart attack risk.
+### **Inferential Analysis**
+1. **ANOVA Results:**  
+   - There are **no significant differences** in cholesterol levels across chest pain types (\( p = 0.6037 \)) or due to fasting blood sugar (\( p = 0.625 \)). *(Excel result – ANOVA results were clearer)*  
 
+2. **Chi-Square Tests:**  
+   - A **significant association** exists between exercise-induced angina (`exang`) and heart attack likelihood (\( p < 0.001 \)). *(Python result – independence chi-square test for rigor)*  
+   - The distribution of chest pain types in the dataset significantly differs from the expected distribution (\( p < 0.001 \)). *(Excel result – goodness-of-fit chi-square test provided relevant details)*  
+
+---
+
+### **Regression Analysis**
+1. **Simple Linear Regression (Age vs. Cholesterol):**  
+   - A **positive but weak relationship** exists between age and cholesterol levels, with \( R^2 = 0.046 \), meaning age explains only 4.6% of the variance in cholesterol. *(Python result – regression details were consistent and detailed)*  
+
+2. **Multiple Linear Regression (Age, Resting BP, Cholesterol):**  
+   - Age and resting blood pressure have a weak but statistically significant relationship with heart attack likelihood (\( R^2 = 0.050 \), \( p = 0.000453 \)). *(Python result – clear and reliable outputs)*  
+
+3. **Logistic Regression:**  
+   - Chest pain type is the most significant predictor of heart attack risk, followed by sex and age. The model has an **AUC of 0.822**, indicating good predictive power. *(Excel result – provided AUC for a better evaluation of the model’s performance)*  
+
+---
 ## Challenges Faced and Solutions
 1. **Challenge**: Finding a suitable dataset that fit the requirements of applying multiple statistical methods.
    - **Solution**: Searched for datasets on platforms like Kaggle and GitHub, and selected one meeting the project criteria.
