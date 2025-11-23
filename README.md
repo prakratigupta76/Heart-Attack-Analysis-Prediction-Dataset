@@ -27,9 +27,9 @@ The objective of this project was to analyze the Heart Attack Risk Prediction da
 ## **Key Insights and Results Summary**
 
 ### **Descriptive Analysis**
-1. The **average age** of patients is **54.37 years**, with the majority (42.57%) falling in the age range of 50–60 years. *(Python result – more precise age distribution provided)*  
-2. The **average cholesterol level** is **246.26 mg/dL**, significantly higher than the known population mean of 200 mg/dL. *(Excel result – from one-sample t-test for clarity and relevance)*  
-3. There is **no significant difference** in the average maximum heart rate achieved between males (148.96 bpm) and females (151.13 bpm). *(Excel result – derived from independent t-test for gender comparison)*  
+1. The **average age** of patients is **54.37 years**, with the majority (42.57%) falling in the age range of 50–60 years. 
+2. The **average cholesterol level** is **246.26 mg/dL**, significantly higher than the known population mean of 200 mg/dL. 
+3. There is **no significant difference** in the average maximum heart rate achieved between males (148.96 bpm) and females (151.13 bpm). 
 
 ---
 
